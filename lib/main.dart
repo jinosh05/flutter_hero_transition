@@ -2,22 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:hero_animation_eg/full_pic_page.dart';
 
 void main(List<String> args) {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: HomeScreen(),
   ));
 }
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  HomeScreenState createState() => HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Hero Animation"),
+          title: const Text("Hero Animation"),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -25,10 +27,10 @@ class _HomeScreenState extends State<HomeScreen> {
             Center(
               child: InkWell(
                 onTap: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => FullImage()));
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const FullImage()));
                 },
-                child: Container(
+                child: SizedBox(
                     width: 100,
                     height: 100,
                     child: Hero(
@@ -40,10 +42,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     )),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
-            Text(
+            const Text(
               " Click Image to Navigate",
               style: TextStyle(
                   color: Colors.blue,
