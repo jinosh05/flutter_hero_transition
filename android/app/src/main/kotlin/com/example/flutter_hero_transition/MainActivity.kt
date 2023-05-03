@@ -1,4 +1,4 @@
-package com.example.hero_animation_eg
+package com.example.flutter_hero_transition
 
 import io.flutter.embedding.android.FlutterActivity
 
